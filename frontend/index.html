@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arma Reforger Workshop Mirror</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────────────────── -->
+  <header>
+    <div class="logo">Reforger <span>Workshop</span></div>
+
+    <div class="search-bar">
+      <input id="search-input" type="search" placeholder="Search mods…" autocomplete="off" />
+      <button aria-label="Search">🔍</button>
+    </div>
+
+    <span id="stats-badge" class="stats-badge">Loading…</span>
+  </header>
+
+  <!-- ── Main layout ────────────────────────────────────────────────────── -->
+  <div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <h3>Sort By</h3>
+      <ul class="sort-list">
+        <li class="active" data-sort="newest">🆕 Newest</li>
+        <li data-sort="popular">🔥 Most Popular</li>
+        <li data-sort="popular_week">📈 Popular This Week</li>
+        <li data-sort="updated">🔄 Recently Updated</li>
+        <li data-sort="alphabetical">🔤 A – Z</li>
+      </ul>
+
+      <h3>Filter by Tag</h3>
+      <div id="tag-pills" class="tag-pills">
+        <!-- Populated by JS -->
+      </div>
+
+    </aside>
+
+    <!-- Mod grid -->
+    <main class="main-content">
+      <div id="mod-grid" class="mod-grid"></div>
+      <div id="scroll-sentinel"></div>
+      <div id="loading-indicator" class="loading-indicator" hidden>Loading more mods…</div>
+    </main>
+
+  </div>
+
+  <!-- ── Mod detail modal ───────────────────────────────────────────── -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal">
+      <button id="modal-close" class="modal__close" aria-label="Close">∕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
