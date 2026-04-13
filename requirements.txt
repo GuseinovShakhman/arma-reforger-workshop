@@ -1,0 +1,16 @@
+# ── API ───────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+sqlalchemy==2.0.30
+pydantic==2.7.1
+
+# ── Scraper ───────────────────────────────────────────────
+playwright==1.44.0
+beautifulsoup4==4.12.3
+apscheduler==3.10.4
+
+# ── Database drivers (optional, uncomment for PostgreSQL) ─
+# psycopg2-binary==2.9.9
+
+# ── Utilities ─────────────────────────────────────────────
+python-dotenv==1.0.1
